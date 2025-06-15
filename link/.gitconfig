@@ -1,0 +1,7 @@
+[user]
+	email = contact@voit.dev
+	name = Hector Araújo
+[pull]
+	rebase = false
+[core]
+  pager = delta

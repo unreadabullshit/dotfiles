@@ -1,0 +1,201 @@
+[
+  {
+    "layer": "top",
+    "position": "top",
+    "spacing": 0,
+    "exclusive": true,
+    "gtk-layer-shell": true,
+    "passthrough": false,
+    "fixed-center": true,
+    "modules-left": ["hyprland/workspaces", "hyprland/window"],
+    "modules-center": ["privacy"],
+    "modules-right": ["group/stats"],
+
+    "hyprland/workspaces": {
+      "disable-scroll": true,
+      "all-outputs": true,
+      "warp-on-scroll": false,
+      "show-special": true,
+      "persistent-workspaces": {
+        "*": [1, 2, 3, 4]
+      },
+      "format": "{}"
+    },
+
+    "group/stats": {
+      "orientation": "horizontal",
+      "modules": [
+        "cpu#short",
+        "custom/gpu",
+        "memory",
+        "disk",
+        "temperature",
+        "hyprland/language"
+      ]
+    },
+
+    "cpu#short": {
+      "interval": 1,
+      "tooltip": false,
+      "format": " {usage}%"
+    },
+
+    "hyprland/window": {
+      "format": "{}",
+      "rewrite": {
+        "(.*) — Mozilla Firefox": "Firefox",
+        "(.*) - Visual Studio Code": "VS Code",
+        "zsh": "Terminal"
+      },
+      "separate-outputs": true
+    },
+
+    "custom/gpu": {
+      "exec": "nvidia-smi --query-gpu=utilization.gpu --format=csv,noheader,nounits",
+      "format": "󰨇 {}%",
+      "return-type": "",
+      "tooltip": false,
+      "interval": 1
+    },
+
+    "privacy": {
+      "icon-spacing": 4,
+      "icon-size": 14,
+      "transition-duration": 250,
+      "modules": [
+        {
+          "type": "screenshare",
+          "tooltip": true,
+          "tooltip-icon-size": 24
+        },
+        {
+          "type": "audio-out",
+          "tooltip": true,
+          "tooltip-icon-size": 24
+        },
+        {
+          "type": "audio-in",
+          "tooltip": true,
+          "tooltip-icon-size": 24
+        }
+      ]
+    },
+
+    "hyprland/language": {
+      "format": "  {short}"
+    },
+
+    "temperature": {
+      "format": " {temperatureC}°C",
+      "format-critical": " {temperatureC}°C",
+      "interval": 1,
+      "critical-threshold": 80,
+      "tooltip": false
+    },
+
+    "disk": {
+      "interval": 1,
+      "format": " {percentage_used}%",
+      "path": "/",
+      "tooltip": true,
+      "tooltip-format": "{used}"
+    },
+
+    "memory": {
+      "interval": 1,
+      "format": " {percentage}%",
+      "tooltip": true,
+      "tooltip-format": "{used:0.2f}G"
+    }
+  },
+  {
+    "layer": "top",
+    "position": "bottom",
+    "modules-left": ["user", "wlr/taskbar"],
+    "modules-center": [],
+    "modules-right": ["group/traaay"],
+
+    "group/traaay": {
+      "orientation": "horizontal",
+      "modules": [
+        "cpu#usage",
+        "network#upload",
+        "network#download",
+        "tray",
+        "pulseaudio",
+        "clock"
+      ]
+    },
+
+    "clock": {
+      // "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+      // "format": "{:%A | %d.%m.%Y | %H:%M}"
+      "format": "{:%I:%M %p}",
+      "tooltip": true,
+      "tooltip-format": "{:%A | %d.%m.%Y | %H:%M}"
+    },
+
+    "cpu#usage": {
+      "interval": 1,
+      "tooltip": false,
+      "format": "{icon0}{icon1}{icon2}{icon3}{icon4}{icon5}{icon6}{icon7}{icon8}{icon9}{icon10}{icon11}",
+      "format-icons": [
+        "<span color='#000'>▁</span>",
+        "<span color='#000'>▂</span>",
+        "<span color='#000'>▃</span>",
+        "<span color='#000'>▄</span>",
+        "<span color='#000'>▅</span>",
+        "<span color='#ff2'>▆</span>",
+        "<span color='#ff2'>▇</span>",
+        "<span color='#ff2525'>█</span>"
+      ]
+    },
+
+    "wlr/taskbar": {
+      "format": "{icon}",
+      "icon-size": 14,
+      "tooltip": false,
+      "on-click": "activate"
+    },
+
+    "tray": {
+      "icon-size": 14,
+      "spacing": 10
+    },
+
+    "user": {
+      "format": " {user}",
+      "interval": 60,
+      "height": 30,
+      "width": 30,
+      "open-on-click": false
+    },
+
+    "network#upload": {
+      "format-wifi": " {bandwidthUpBits}",
+      "format-ethernet": " {bandwidthUpBits}",
+      "interval": 1
+    },
+
+    "pulseaudio": {
+      "format": "{icon} {volume}%",
+      "format-muted": "  muted",
+      "format-icons": {
+        "headphone": " ",
+        "hands-free": "",
+        "headset": "",
+        "phone": "",
+        "portable": "",
+        "car": "",
+        "default": [" ", " ", " "]
+      },
+      "on-click": "pavucontrol"
+    },
+
+    "network#download": {
+      "format-wifi": " {bandwidthDownBits}",
+      "format-ethernet": " {bandwidthDownBits}",
+      "interval": 1
+    }
+  }
+]

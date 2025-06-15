@@ -1,0 +1,101 @@
+"$schema" = 'https://starship.rs/config-schema.json'
+
+format = """
+$os\
+$username\
+[](fg:color_purple bg:color_grey)\
+$directory\
+$nodejs\
+$zig\
+[](fg:color_grey bg:color_white)\
+$git_branch\
+$git_status\
+[ ](fg:color_white)\
+$line_break$line_break$character"""
+
+palette = 'GalacticFlavored'
+add_newline = true
+
+[palettes.GalacticFlavored]
+color_white = '#f2f2f2'
+color_black = '#0c0c0c'
+color_grey = '#333333'
+color_purple = '#6F61C0'
+color_lilac = '#a084e8'
+color_blue = '#8be8e5'
+color_leaf = '#D5FFE4'
+color_red = '#e88b8b'
+
+[os]
+disabled = false
+style = "bg:color_purple fg:color_white"
+format = '[ $symbol]($style)'
+
+[os.symbols]
+Windows = "󰍲"
+Ubuntu = "󰕈"
+SUSE = ""
+Raspbian = "󰐿"
+Mint = "󰣭"
+Macos = "󰀵"
+Manjaro = ""
+Linux = "󰌽"
+Gentoo = "󰣨"
+Fedora = "󰣛"
+Alpine = ""
+Amazon = ""
+Android = ""
+Arch = "󰣇"
+Artix = "󰣇"
+CentOS = ""
+Debian = "󰣚"
+Redhat = "󱄛"
+RedHatEnterprise = "󱄛"
+
+[username]
+show_always = true
+style_user = "bold bg:color_purple fg:color_white"
+style_root = "bold bg:color_leaf fg:color_white"
+format = '[ $user ]($style)'
+
+[directory]
+style = "fg:color_white bg:color_grey"
+format = "[ $path ]($style)"
+truncation_length = 3
+truncation_symbol = "…/"
+
+[git_branch]
+symbol = ""
+style = "fg:color_black bg:color_white"
+format = '[ $symbol $branch ]($style)'
+
+[git_status]
+format = "[($conflicted$untracked$modified$staged$renamed$deleted) ($ahead_behind$stashed)]($style)"
+style = "fg:color_black bg:color_white"
+stashed = ""
+ahead = "($count) "
+behind = "($count) "
+untracked = "($count)󱔢 "
+conflicted = "($count) "
+deleted = "($count) "
+renamed = "($count) "
+modified = "($count) "
+staged = "($count) "
+
+[nodejs]
+symbol = ""
+style = "bg:color_grey fg:color_white"
+format = '[$symbol ]($style)'
+
+[zig]
+symbol = ""
+style = "bg:color_grey fg:color_white"
+format = '[$symbol ]($style)'
+
+[line_break]
+disabled = false
+
+[character]
+disabled = false
+success_symbol = '[\$](bold fg:color_blue)'
+error_symbol = '[\$](bold fg:color_blue)'

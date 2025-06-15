@@ -1,0 +1,11 @@
+./link/waybar:~/.config/waybar
+./link/hypr:~/.config/hypr
+./link/.zshrc:~/.zshrc
+./link/.tmux.conf:~/.tmux.conf
+./link/starship.toml:~/.config/starship.toml
+./link/.gitconfig:~/.gitconfig
+./link/ghostty:~/.config/ghostty
+./link/linearmouse:~/.config/linearmouse
+./link/yazi:~/.config/yazi
+./link/helix:~/.config/helix
+./link/nix:~/nix

@@ -1,0 +1,9 @@
+[manager]
+sort_dir_first = true
+sort_sensitive = false
+sort_by = "natural"
+sort_translit = true
+show_symlink = true
+scrolloff = 8
+linemode = "size"
+ratio = [2, 4, 3]

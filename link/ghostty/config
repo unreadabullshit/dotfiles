@@ -1,0 +1,27 @@
+theme = Galactic Flavored
+
+font-family = CommitMono Nerd Font
+font-family-bold = CommitMono Nerd Font Bold
+font-family-italic = CommitMono Nerd Font Italic
+font-family-bold-italic = CommitMono Nerd Font Bold Italic
+font-size = 18
+font-feature = -liga
+
+background-blur-radius = 20
+mouse-hide-while-typing = true
+cursor-style = block
+
+macos-icon = xray
+auto-update = off
+
+unfocused-split-opacity = 0.8
+split-divider-color = #333333
+
+font-synthetic-style = false
+
+shell-integration-features = no-cursor, title
+
+# custom-shader = shaders/tft.glsl
+# custom-shader = shaders/glow-rgbsplit-twitchy.glsl
+# custom-shader = shaders/glitchy.glsl
+# custom-shader = shaders/crt.glsl

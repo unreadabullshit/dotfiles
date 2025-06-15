@@ -1,0 +1,242 @@
+"attribute" = { fg = "eggshell" }
+
+# Syntax highlighting
+# -------------------
+
+"type" = { fg = "white" }
+"type.builtin" = { fg = "white" }
+"type.parameter" = { fg = "eggshell" }
+"type.enum" = { fg = "white" }
+"type.enum.variant" = { fg = "white" }
+
+"constructor" = { fg = "leaf" }
+
+"constant" = { fg = "latte" }
+"constant.builtin" = { fg = "latte" }
+"constant.builtin.boolean" = { fg = "latte" }
+"constant.character" = { fg = "latte" }
+"constant.character.escape" = { fg = "orange" }
+"constant.numeric" = { fg = "latte" }
+"constant.numeric.integer" = { fg = "latte" }
+"constant.numeric.float" = { fg = "latte" }
+
+"string" = { fg = "latte" }
+"string.regexp" = { fg = "orange" }
+"string.special" = { fg = "latte" }
+"string.special.path" = { fg = "blue" }
+"string.special.url" = { fg = "blue" }
+"string.special.symbol" = { fg = "latte" }
+
+"comment" = { fg = "mono3" }
+"comment.line" = { fg = "mono3" }
+"comment.block" = { fg = "mono3" }
+"comment.block.documentation" = { fg = "mono3" }
+
+"variable" = { fg = "leaf" }
+"variable.builtin" = { fg = "leaf" }
+"variable.parameter" = { fg = "leaf" }
+"variable.other" = { fg = "white" }
+"variable.other.member" = { fg = "white" }
+"variable.other.member.private" = { fg = "white" }
+
+"label" = { fg = "eggnog" }
+
+"ponctuation" = { fg = "white" }
+"ponctuation.delimiter" = { fg = "white" }
+"ponctuation.bracket" = { fg = "white" }
+"ponctuation.special" = { fg = "white" }
+
+"keyword" = { fg = "white" }
+"keyword.control" = { fg = "white" }
+"keyword.control.conditional" = { fg = "white" }
+"keyword.control.repeat" = { fg = "white" }
+"keyword.control.import" = { fg = "white" }
+"keyword.control.return" = { fg = "white" }
+"keyword.control.exception" = { fg = "white" }
+"keyword.operator" = { fg = "white" }
+"keyword.directive" = { fg = "white" }
+"keyword.function" = { fg = "white" }
+"keyword.storage" = { fg = "white" }
+"keyword.storage.type" = { fg = "white" }
+"keyword.storage.modifier" = { fg = "white" }
+
+"operator" = { fg = "white" }
+
+"function" = { fg = "purple" }
+"function.builtin" = { fg = "purple" }
+"function.method" = { fg = "purple" }
+"function.method.private" = { fg = "purple" }
+"function.macro" = { fg = "purple" }
+"function.special" = { fg = "purple" }
+
+"tag" = { fg = "white" }
+"tag.builtin" = { fg = "white" }
+
+"namespace" = { fg = "leaf" }
+
+"special" = { fg = "violet" }
+
+# Markup-related tokens - commenting out as specific styling wasn't specified
+# "markup" = 
+# "markup.heading" = 
+# "markup.heading.marker" = 
+# "markup.heading.1" = 
+# "markup.heading.2" = 
+# "markup.heading.3" = 
+# "markup.heading.4" = 
+# "markup.heading.5" = 
+# "markup.heading.6" = 
+# "markup.list" = 
+# "markup.list.unnumbered" = 
+# "markup.list.numbered" = 
+# "markup.list.checked" = 
+# "markup.list.unchecked" = 
+# "markup.bold" = 
+# "markup.italic" = 
+# "markup.strikethrough" = 
+# "markup.link" = 
+"markup.link.url" = "blue"
+# "markup.link.label" = 
+# "markup.link.text" = 
+# "markup.quote" = 
+# "markup.raw" = 
+# "markup.raw.inline" = 
+# "markup.raw.block" = 
+
+
+"diff.plus" = "green"
+"diff.minus" = "red"
+"diff.delta" = "blue"
+"diff.delta.moved" = "mono4"
+"diff.delta.conflict" = "orange"
+
+# User Interface
+# --------------
+
+# UI Markup tokens - commenting out as specific styling wasn't specified
+# "markup" = 
+# "markup.normal" = 
+# "markup.normal.completion" = 
+# "markup.normal.hover" = 
+# "markup.heading" = 
+# "markup.heading.completion" = 
+# "markup.heading.hover" = 
+# "markup.raw" = 
+# "markup.raw.inline" = 
+# "markup.raw.inline.completion" = 
+# "markup.raw.inline.hover" = 
+
+"ui.background" = { bg = "black" }
+"ui.background.separator" = { fg = "mono4" }
+
+"ui.cursor" = { fg = "white", modifiers = ["reversed"] }
+"ui.cursor.normal" = { fg = "white", modifiers = ["reversed"] }
+"ui.cursor.insert" = { fg = "white", modifiers = ["reversed"] }
+"ui.cursor.select" = { fg = "white", modifiers = ["reversed"] }
+
+"ui.cursor.match" = { fg = "white", modifiers = ["reversed"] }
+
+"ui.cursor.primary" = { fg = "white", modifiers = ["reversed"] }
+"ui.cursor.primary.normal" = { fg = "white", modifiers = ["reversed"] }
+"ui.cursor.primary.insert" = { fg = "white", modifiers = ["reversed"] }
+"ui.cursor.primary.select" = { fg = "white", modifiers = ["reversed"] }
+
+"ui.debug.breakpoint" = { fg = "red" }
+"ui.debug.active" = { fg = "green" }
+
+"ui.gutter" = { bg = "black" }
+"ui.gutter.selected" = { bg = "mono6" }
+"ui.linenr" = { bg = "black", fg = "mono5" }
+"ui.linenr.selected" = { fg = "black", bg = "mono1" }
+
+"ui.statusline" = { fg = "mono1", bg = "mono6" }
+# "ui.statusline.inactive" = { fg = "mono6", bg = "black" }
+"ui.statusline.normal" = { fg = "black", bg = "mono1" }
+"ui.statusline.insert" = { fg = "black", bg = "yellow" }
+"ui.statusline.select" = { fg = "black", bg = "blue" }
+"ui.statusline.separator" = { fg = "mono4" }
+
+"ui.bufferline" = { fg = "mono2", bg = "mono4" }
+"ui.bufferline.active" = { fg = "black", bg = "mono1", modifiers = ["bold"] }
+"ui.bufferline.background" = { bg = "black" }
+
+"ui.popup" = { fg = "white", bg = "mono4" }
+"ui.popup.info" = { fg = "white", bg = "mono4" }
+
+"ui.picker.header" = { bg = "black", modifiers = ["bold"] }
+"ui.picker.header.column" = { fg = "mono2" }
+"ui.picker.header.column.active" = { fg = "eggnog", modifiers = ["bold"] }
+
+"ui.window" = { bg = "mono5" }
+"ui.help" = { fg = "white", bg = "mono4" }
+
+"ui.text" = { fg = "white" }
+"ui.text.focus" = { fg = "white", modifiers = ["bold"] }
+"ui.text.inactive" = { fg = "mono5" }
+"ui.text.info" = { fg = "white" }
+"ui.text.directory" = { fg = "white" }
+
+# "ui.virtual.ruler" = { bg = "mono5" }
+# "ui.virtual.whitespace" = { fg = "mono5" }
+"ui.virtual.indent-guide" = { fg = "mono5" }
+# "ui.virtual.inlay-hint" = { fg = "mono5" }
+# "ui.virtual.inlay-hint.parameter" = { fg = "mono5" }
+# "ui.virtual.inlay-hint.type" = { fg = "mono5" }
+# "ui.virtual.wrap" = { fg = "mono5" }
+# "ui.virtual.jump-label" = { fg = "purple", modifiers = ["bold"] }
+
+"ui.menu" = { fg = "mono2", bg = "mono4" }
+"ui.menu.selected" = { fg = "black", bg = "mono1" }
+"ui.menu.scroll" = { fg = "violet" }
+
+"ui.selection" = { bg = "purple", fg = "white" }
+"ui.selection.primary" = { bg = "purple", fg = "white" }
+
+# "ui.highlight" = { bg = "mono5" }
+# "ui.highlight.frameline" = { bg = "mono5" }
+
+"ui.cursorline.primary" = { bg = "mono6" }
+"ui.cursorline.secondary" = { bg = "mono6" }
+
+"ui.cursorcolumn.primary" = { bg = "mono6" }
+"ui.cursorcolumn.secondary" = { bg = "mono6" }
+
+"warning" = { fg = "orange" }
+"error" = { fg = "red" }
+"info" = { fg = "blue" }
+"hint" = { fg = "yellow" }
+
+"diagnostic" = { fg = "mono5" }
+"diagnostic.hint" = { fg = "yellow" }
+"diagnostic.info" = { fg = "blue" }
+"diagnostic.warning" = { fg = "orange" }
+"diagnostic.error" = { fg = "red" }
+"diagnostic.unnecessary" = { fg = "mono5", modifiers = ["underlined"] }
+"diagnostic.deprecated" = { fg = "mono5", modifiers = ["crossed_out"] }
+
+"tabstop" = { fg = "white" }
+
+[palette]
+white = "#F2F2F2"
+black = "#0C0C0C"
+
+mono1 = "#A1A1A1"
+mono2 = "#717171"
+mono3 = "#525252"
+mono4 = "#3f3f3f"
+mono5 = "#272727"
+mono6 = "#181818"
+
+eggnog = "#FEF9C3"
+eggshell = "#FEFCE7"
+
+violet = "#6F61C0"
+purple = "#A084E8"
+leaf = "#8BE8E5"
+latte = "#D5FFE4"
+
+red = "#DB8F8D"
+green = "#63CD90"
+yellow = "#E6E295"
+blue = "#88AAFF"
+orange = "#F7BE6D"

@@ -1,0 +1,27 @@
+# light colors
+palette = 0=#666666
+palette = 1=#db8f8d
+palette = 2=#63cd90
+palette = 3=#e6e295
+palette = 4=#8be8e5
+palette = 5=#6F61C0
+palette = 6=#D5FFE4
+palette = 7=#F2F2F2
+
+# darker colors
+palette = 8=#333333
+palette = 9=#db8f8d
+palette = 10=#63cd90
+palette = 11=#e6e295
+palette = 12=#8be8e5
+palette = 13=#6F61C0
+palette = 14=#D5FFE4
+palette = 15=#FFFFFF
+
+background = #171717
+foreground = #F2F2F2
+cursor-color = #8BE8E5
+selection-background = #A084E8
+selection-foreground = #171717
+
+
