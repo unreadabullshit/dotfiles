@@ -164,7 +164,7 @@
           nix = {
             gc = {
               automatic = true;
-              dates = "daily";
+              interval = { Weekday = 0; Hour = 3; Minute = 0; };
               options = "--delete-older-than 20d";
             };
 
