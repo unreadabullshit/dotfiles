@@ -111,6 +111,8 @@
           system.defaults = {
             dock = {
               autohide = true;
+              autohide-delay = 0.0;
+              autohide-time-modifier = 1.0;
               persistent-apps = [
                 "/Applications/LibreWolf.app"
                 "/Applications/Ghostty.app"
@@ -129,16 +131,48 @@
               mineffect = "genie";
               minimize-to-application = true;
             };
-            loginwindow.GuestEnabled = false;
+            loginwindow = {
+              GuestEnabled = false;
+              SHOWFULLNAME = false;
+            };
+            finder = {
+              AppleShowAllExtensions = true;
+              AppleShowAllFiles = true;
+              FXEnableExtensionChangeWarning = true;
+              _FXShowPosixPathInTitle = true;
+              _FXSortFoldersFirstOnDesktop = true;
+            };
+            trackpad = {
+              ActuationStrength = 0;
+              Clicking = true;
+              FirstClickThreshold = 1;
+              SecondClickThreshold = 1;
+              TrackpadRightClick = false;
+              TrackpadThreeFingerDrag = true;
+            };
             NSGlobalDomain = {
+              ApplePressAndHoldEnabled = false;
+              InitialKeyRepeat = 10;
+              AppleShowAllExtensions = true;
+              AppleShowScrollBars = "Automatic";
               AppleICUForce24HourTime = true;
               AppleInterfaceStyle = "Dark";
-              KeyRepeat = 2;
+              KeyRepeat = 1;
             };
           };
 
-          # Necessary for using flakes on this system.
-          nix.settings.experimental-features = "nix-command flakes";
+          nix = {
+            gc = {
+              automatic = true;
+              dates = "daily";
+              options = "--delete-older-than 20d";
+            };
+
+            
+            # Necessary for using flakes on this system.
+            settings.experimental-features = "nix-command flakes";
+          };
+
 
           # Enable alternative shell support in nix-darwin.
           # programs.fish.enable = true;
