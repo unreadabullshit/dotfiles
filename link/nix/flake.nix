@@ -42,18 +42,21 @@
           # $ nix-env -qaP | grep wget
           environment.systemPackages = [
             pkgs.typescript-language-server
+            pkgs.kotlin-language-server
+            pkgs.astro-language-server
             pkgs.vscode
             pkgs.qbittorrent
             pkgs.tmux
+            pkgs.mpv
             pkgs.git
-            pkgs.kotlin-language-server
             pkgs.starship
-            pkgs.zig
-            pkgs.cargo
+            pkgs.hyperfine
+            pkgs.zig_0_14
             pkgs.eza
             pkgs.neovim
             pkgs.nodejs_22
             pkgs.iina
+            pkgs.htop
             pkgs.discord
             pkgs.ripgrep
             pkgs.fzf
@@ -79,20 +82,21 @@
             brews = [
               "lazygit"
               "helix"
+              "wimlib"
               "luarocks"
               "jq"
               "ffmpeg"
               "sevenzip"
               "poppler"
               "imagemagick"
-              "pnpm"
               "zsh-syntax-highlighting"
               "zsh-autosuggestions"
             ];
 
             casks = [
               "ghostty"
-              "librewolf"
+              "zen"
+              "font-monocraft"
               "rar"
               "linearmouse"
               "stats"
@@ -114,7 +118,7 @@
               autohide-delay = 0.0;
               autohide-time-modifier = 1.0;
               persistent-apps = [
-                "/Applications/LibreWolf.app"
+                "/Applications/Zen.app"
                 "/Applications/Ghostty.app"
               ];
               tilesize = 48;
@@ -136,10 +140,10 @@
               SHOWFULLNAME = false;
             };
             finder = {
-              AppleShowAllExtensions = true;
+              AppleShowAllExtensions = false;
               AppleShowAllFiles = true;
-              FXEnableExtensionChangeWarning = true;
-              _FXShowPosixPathInTitle = true;
+              FXEnableExtensionChangeWarning = false;
+              _FXShowPosixPathInTitle = false;
               _FXSortFoldersFirstOnDesktop = true;
             };
             trackpad = {
@@ -147,17 +151,17 @@
               Clicking = true;
               FirstClickThreshold = 1;
               SecondClickThreshold = 1;
-              TrackpadRightClick = false;
-              TrackpadThreeFingerDrag = true;
+              TrackpadRightClick = true;
+              TrackpadThreeFingerDrag = false;
             };
             NSGlobalDomain = {
               ApplePressAndHoldEnabled = false;
-              InitialKeyRepeat = 10;
+              InitialKeyRepeat = 40;
               AppleShowAllExtensions = true;
               AppleShowScrollBars = "Automatic";
               AppleICUForce24HourTime = true;
               AppleInterfaceStyle = "Dark";
-              KeyRepeat = 1;
+              KeyRepeat = 20;
             };
           };
 

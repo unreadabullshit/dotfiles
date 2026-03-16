@@ -1,4 +1,6 @@
 export ANDROID_HOME=$HOME/Library/Android/sdk
+export BUN_INSTALL=$HOME/.bun
+export HOMEBREW_PREFIX=/opt/homebrew
 export EDITOR='hx'
 
 # Combine PATH exports into a single statement
@@ -10,6 +12,9 @@ export PATH="\
 /sbin:\
 $ANDROID_HOME/emulator:\
 $ANDROID_HOME/platform-tools:\
+$BUN_INSTALL/bin:\
+$HOME/zig:\
+$HOME/zls:\
 $PATH\
 "
 
@@ -184,10 +189,9 @@ function y() {
 eval "$(zoxide init zsh)"
 eval "$(starship init zsh)"
 
-
 # bun completions
 [ -s "/Users/unreadabullshit/.bun/_bun" ] && source "/Users/unreadabullshit/.bun/_bun"
 
-# bun
-export BUN_INSTALL="$HOME/.bun"
-export PATH="$BUN_INSTALL/bin:$PATH"
+eval "$(fnm env --use-on-cd --shell zsh)"
+
+. "$HOME/.local/bin/env"

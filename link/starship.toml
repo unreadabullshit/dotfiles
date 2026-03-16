@@ -5,8 +5,6 @@ $os\
 $username\
 [](fg:color_purple bg:color_grey)\
 $directory\
-$nodejs\
-$zig\
 [](fg:color_grey bg:color_white)\
 $git_branch\
 $git_status\
@@ -81,16 +79,6 @@ deleted = "($count) "
 renamed = "($count) "
 modified = "($count) "
 staged = "($count) "
-
-[nodejs]
-symbol = ""
-style = "bg:color_grey fg:color_white"
-format = '[$symbol ]($style)'
-
-[zig]
-symbol = ""
-style = "bg:color_grey fg:color_white"
-format = '[$symbol ]($style)'
 
 [line_break]
 disabled = false
