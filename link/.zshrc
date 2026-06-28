@@ -1,4 +1,5 @@
 export ANDROID_HOME=$HOME/Library/Android/sdk
+export JAVA_HOME=$(/usr/libexec/java_home -v 17 2>/dev/null || /usr/libexec/java_home)
 export BUN_INSTALL=$HOME/.bun
 export HOMEBREW_PREFIX=/opt/homebrew
 export EDITOR='hx'
