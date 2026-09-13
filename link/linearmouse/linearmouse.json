@@ -1,45 +1,46 @@
 {
+  "$schema" : "https:\/\/schema.linearmouse.app\/0.11.3",
   "schemes" : [
     {
-      "scrolling" : {
-        "acceleration" : {
-          "vertical" : 1
-        }
-      },
       "if" : {
         "device" : {
           "category" : "trackpad",
-          "vendorID" : "0x5ac",
           "productID" : "0x281",
-          "productName" : "Apple Internal Keyboard \/ Trackpad"
+          "productName" : "Apple Internal Keyboard \/ Trackpad",
+          "vendorID" : "0x5ac"
         }
       },
       "pointer" : {
         "disableAcceleration" : false
-      }
-    },
-    {
+      },
       "scrolling" : {
         "acceleration" : {
           "vertical" : 1
-        },
-        "reverse" : {
-          "vertical" : true
+        }
+      }
+    },
+    {
+      "if" : {
+        "device" : {
+          "category" : "mouse"
         }
       },
+      "pointer" : {
+        "disableAcceleration" : true
+      }
+    },
+    {
       "if" : {
         "device" : {
           "category" : "mouse",
-          "vendorID" : "0x3434",
           "productID" : "0xd031",
-          "productName" : "Keychron Link "
+          "productName" : "Keychron Link ",
+          "vendorID" : "0x3434"
         }
       },
       "pointer" : {
         "disableAcceleration" : true
-      }
-    },
-    {
+      },
       "scrolling" : {
         "acceleration" : {
           "vertical" : 1
@@ -47,20 +48,20 @@
         "reverse" : {
           "vertical" : true
         }
-      },
+      }
+    },
+    {
       "if" : {
         "device" : {
           "category" : "mouse",
-          "vendorID" : "0x3434",
           "productID" : "0xd030",
-          "productName" : "Keychron Link "
+          "productName" : "Keychron Link ",
+          "vendorID" : "0x3434"
         }
       },
       "pointer" : {
         "disableAcceleration" : true
-      }
-    },
-    {
+      },
       "scrolling" : {
         "acceleration" : {
           "vertical" : 1
@@ -68,20 +69,29 @@
         "reverse" : {
           "vertical" : true
         }
-      },
+      }
+    },
+    {
       "if" : {
         "device" : {
-          "serialNumber" : "SN1234567890",
           "category" : "mouse",
-          "vendorID" : "0x3434",
           "productID" : "0xd033",
-          "productName" : "Keychron M3"
+          "productName" : "Keychron M3",
+          "serialNumber" : "SN1234567890",
+          "vendorID" : "0x3434"
         }
       },
       "pointer" : {
         "disableAcceleration" : true
+      },
+      "scrolling" : {
+        "acceleration" : {
+          "vertical" : 1
+        },
+        "reverse" : {
+          "vertical" : true
+        }
       }
     }
-  ],
-  "$schema" : "https:\/\/schema.linearmouse.app\/0.10.0"
+  ]
 }

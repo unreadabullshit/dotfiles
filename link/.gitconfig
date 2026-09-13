@@ -5,3 +5,4 @@
 	rebase = false
 [core]
   pager = delta
+	autocrlf = input
